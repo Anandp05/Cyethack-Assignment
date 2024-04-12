@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/home/Home";
 import List from "./components/List";
 import ListDetail from "./components/ListDetail";
-import  { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
+import { useSelector } from "react-redux";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(
-    document.cookie.includes("isLoggedIn=true")
-  );
-
-  useEffect(() => {
-    const checkLoginStatus = () => {
-      const isLoggedInFromCookie = document.cookie.includes("isLoggedIn=true");
-      setIsLoggedIn(isLoggedInFromCookie);
-    };
-
-    checkLoginStatus();
-  }, [isLoggedIn]); // Empty dependency array ensures useEffect runs only once on component mount
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   return (
     <div className="h-screen w-screen flex justify-center items-center">

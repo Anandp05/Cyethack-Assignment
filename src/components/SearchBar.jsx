@@ -10,6 +10,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { CiLogout } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../store/slices/authSlice";
 import { toast } from "react-hot-toast";
 
 const Search = styled("div")(({ theme }) => ({
@@ -56,8 +58,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
   const logoutHandler = () => {
-    document.cookie = "isLoggedIn=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    dispatch(logout());
     toast("Logged out successfully!");
     navigate("/");
   };
