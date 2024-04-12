@@ -65,7 +65,8 @@ This command will start the development server provided by Vite. You can access 
 - Material UI
 - Chart.js
 - npm Meter package
-- (Add any other relevant technologies used)
+- Toast
+- Cookies
 
 ## Contributing
 
