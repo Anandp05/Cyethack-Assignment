@@ -6,7 +6,7 @@ Sure, here's how you can structure your `README.md` file to include the installa
 # Project Name
 
 Brief project description here.
-![Alt Text](../Cyethack-Assignment/src/assets/SessionStorage.png)
+![Alt Text]("src/../src/assets/Login.png")
 
 ## Table of Contents
 - [Installation](#installation)
