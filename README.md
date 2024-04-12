@@ -72,12 +72,6 @@ This command will start the development server provided by Vite. You can access 
 
 Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
-You can paste this content into your `README.md` file and modify it accordingly to fit your project's specific details and requirements.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
