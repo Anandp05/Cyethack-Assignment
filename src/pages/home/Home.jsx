@@ -72,9 +72,10 @@ const Home = () => {
         </form>
       )}
       {isLoggedIn && (
-        <div>
+        <div className="flex flex-col justify-center">
           <h2 className="text-center font-bold text-2xl ">Hello User</h2>
-          <button className="font-bold text-xl" onClick={()=>{navigate("/list")}}>Go to the Dashboard!</button>
+          <button className="font-bold  text-center text-xl" onClick={()=>{navigate("/list")}}>Go to the Dashboard!</button>
+          <p className="text-center text-[red] font-bold text-2xl ">Kindly Click on the page refresh and then click on the Dashboard again</p>
         </div>
       )}
     </div>
