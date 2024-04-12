@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import toast, { LoaderIcon } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/slices/authSlice";
+import { HiArrowRight } from "react-icons/hi2";
 
 const Home = () => {
   const [username, setUsername] = useState("");
@@ -80,14 +81,15 @@ const Home = () => {
       )}
       {isLoggedIn && (
         <div className="flex flex-col justify-center">
-          <h2 className="text-center font-bold text-2xl ">Hello User</h2>
+          <h2 className="text-center font-bold text-2xl ">Hello User !!!</h2>
           <button
-            className="font-bold  text-center text-xl"
+            className="font-bold flex gap-2 justify-center item-center text-center text-xl"
             onClick={() => {
               navigate("/list");
             }}
           >
-            Go to the Dashboard!
+           Go to the Dashboard!
+            <div className="mt-1"><HiArrowRight /></div>
           </button>
         </div>
       )}
