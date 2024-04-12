@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import homebg from "../../assets/homebg.webp";
 import 'react-toastify/dist/ReactToastify.css';
-  import toast from "react-hot-toast";
+import toast from "react-hot-toast";
+
 
 const Home = () => {
  
@@ -73,7 +74,7 @@ const Home = () => {
       {isLoggedIn && (
         <div>
           <h2 className="text-center font-bold text-2xl ">Hello User</h2>
-          <a className="font-bold text-xl" href="/list">Go to the Dashboard!</a>
+          <button className="font-bold text-xl" onClick={()=>{navigate("/list")}}>Go to the Dashboard!</button>
         </div>
       )}
     </div>
