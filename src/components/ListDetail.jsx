@@ -204,7 +204,7 @@ const ListDetail = () => {
           </tr>
             {Object.keys(Vulnerabilities).map((key) => (
               <tr key={key} className="border-[1px]  grid grid-cols-3 col-span-3 row-span-1">
-                <td className="col-span-1 my-auto text-center"><button className="w-[40%] px-5 py-2 rounded-md" style={{ backgroundColor: Vulnerabilities[key].color }}>{Vulnerabilities[key].type}</button></td>
+                <td className="col-span-1 my-auto text-center"><button className="w-[40%]  px-5 py-2 rounded-md" style={{ backgroundColor: Vulnerabilities[key].color }}>{Vulnerabilities[key].type}</button></td>
                 <td className="col-span-1 my-auto text-center">{Vulnerabilities[key].content}</td>
                 <td className="col-span-1 my-auto text-center">{Vulnerabilities[key].value}</td>
               </tr>

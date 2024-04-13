@@ -6,7 +6,7 @@ const initialState = {
     // Sample data array
     {
       item_id: 1,
-      Scan_name: "John Doe",
+      Scan_name: "ITsecgames active scanning from VM",
       URL: "https://www.cyethack.com/",
       ScanEngine: "Engine-jan 10",
       status: "completed",
@@ -21,7 +21,7 @@ const initialState = {
     },
     {
       item_id: 2,
-      Scan_name: "John Doe",
+      Scan_name: "Dcirus scanning from VM",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",
@@ -36,7 +36,7 @@ const initialState = {
     },
     {
       item_id: 3,
-      Scan_name: "John Doe",
+      Scan_name: "BWAPP recon scan from VM",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",
@@ -51,7 +51,7 @@ const initialState = {
     },
     {
       item_id: 4,
-      Scan_name: "John Doe",
+      Scan_name: "BWAPP recon scan from docker2",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",
@@ -66,7 +66,7 @@ const initialState = {
     },
     {
       item_id: 5,
-      Scan_name: "John Doe",
+      Scan_name: "BWAPP recon scan",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",
@@ -81,7 +81,7 @@ const initialState = {
     },
     {
       item_id: 6,
-      Scan_name: "John Doe",
+      Scan_name: "BWAPP recon scan",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",
@@ -96,7 +96,7 @@ const initialState = {
     },
     {
       item_id: 7,
-      Scan_name: "John Doe",
+      Scan_name: "BWAPP recon scan",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",
@@ -111,7 +111,7 @@ const initialState = {
     },
     {
       item_id: 8,
-      Scan_name: "John Doe",
+      Scan_name: "BWAPP recon scan",
       URL: "https://www.cyethack.com/",
       ScanEngine: "tanishq doing testing (wow)",
       status: "completed",

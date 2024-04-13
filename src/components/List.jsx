@@ -20,24 +20,24 @@ const List = () => {
   };
 
   return (
-    <div className="w-full h-full">
-      <div className=" flex ">
+    <div className=" w-full h-full">
+      <div className="bg-gray-200 flex ">
         <SearchBar></SearchBar>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-5">
         <NavBar></NavBar>
       </div>
       <table className="w-full">
         <thead>
-          <tr className="bg-gray-200 grid grid-cols-9 mt-5  px-8 gap-x-10">
-            <th className="px-4 my-auto py-2">Scan Name</th>
-            <th className="px-4 my-auto py-2">Target URL</th>
+          <tr className="bg-gray-200 gap-x-10 text-sm font-bold text-left grid grid-cols-12   px-8 ">
+            <th className="px-4 my-auto col-span-3 py-2">Scan Name</th>
+            <th className="px-4 my-auto col-span-2 py-2">Target URL</th>
             <th className="px-4 col-span-2 my-auto py-2">Scan Engine</th>
-            <th className="px-4 my-auto py-2">Status</th>
-            <th className="px-4 my-auto py-2">Risk Score</th>
-            <th className="px-4 my-auto py-2">Total Vulnerabilities</th>
-            <th className="px-4 my-auto py-2">Severity</th>
+            <th className="px-4 col-span-1 my-auto py-2">Status</th>
+            <th className="px-4 col-span-1 my-auto py-2">Risk Score</th>
+            <th className="px-4  col-span-1 my-auto py-2">Total Vulnerabilities</th>
+            <th className="px-4 col-span-1 my-auto py-2">Severity</th>
           </tr>
         </thead>
         <tbody>
