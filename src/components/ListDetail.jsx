@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import NavBar from "./NavBar";
-import SearchBar from "../components/SearchBar"
+import SearchBar from "./Header"
 
 
 const Vulnerabilities = {

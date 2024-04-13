@@ -4,6 +4,7 @@ import { removeStudent } from "../store/slices/studentSlice";
 import ListItem from "./ListItem";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import Header from "./Header";
 import SearchBar from "./SearchBar";
 
 const List = () => {
@@ -20,8 +21,9 @@ const List = () => {
   };
 
   return (
-    <div className=" w-full h-full">
-      <div className="bg-gray-200 flex ">
+    <div className="w-full h-full">
+      <div className=" w-full flex flex-col bg-gray-200">
+        <Header></Header>
         <SearchBar></SearchBar>
       </div>
 

@@ -1,104 +1,30 @@
-import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import { CiLogout } from "react-icons/ci";
-import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../store/slices/authSlice";
-import { toast } from "react-hot-toast";
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import React from 'react'
+import Button from '@mui/material/Button';
 
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  width: "100%",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "20ch",
-      },
-    },
-  },
-}));
-
-export default function SearchAppBar() {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-
-  const logoutHandler = () => {
-    dispatch(logout());
-    toast("Logged out successfully!");
-    navigate("/");
-  };
+function SearchBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Cyethack
-          </Typography>
-          <button onClick={logoutHandler}>
-            {" "}
-            <div className="ml-5 flex gap-x-5 justify-center items-center" >
-            <NotificationsIcon></NotificationsIcon>
-            <AccountCircle></AccountCircle>
-            <CiLogout className=" cursor-pointer" />
-            </div>
-          </button>
-        </Toolbar>
-      </AppBar>
-    </Box>
-  );
+    <div className=' w-full flex justify-around mt-3 mb-3'>
+    <div class='w-[90%] mx-3'>
+    <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+        <div class="grid place-items-center h-full w-12 text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+
+        <input
+        class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+        type="text"
+        id="search"
+        placeholder="Search something.." />
+        <div className='mt-3'>
+        </div>
+
+</div>
+    </div>
+    <button className='mx-3 w-[20%] p-2 font-bold rounded-md text-white bg-[#3366ff]'>Add New Profile</button>
+</div>
+  )
 }
+
+export default SearchBar
