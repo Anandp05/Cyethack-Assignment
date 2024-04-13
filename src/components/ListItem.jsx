@@ -9,7 +9,7 @@ const ListItem = ({ item, handleRowClick }) => {
       key={item.item_id}
       className="border-[1px] grid grid-cols-12 gap-x-10"
     >
-      <td className="flex text-sm justify-centerfont-semibold text-left col-span-3 text-blue-500  ">{item.Scan_name} <HiChevronDown /></td>
+      <td className="gap-x-1 flex text-sm justify-centerfont-semibold text-left col-span-3 text-blue-500  ">{item.Scan_name}<div className="mt-1 text-black"><HiChevronDown /></div></td>
       <td className="col-span-2 text-sm  text-left">
         <a href={item.URL} className="text-sm  text-blue-500 underline">
           {item.URL}

@@ -13,6 +13,8 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../store/slices/authSlice";
 import { toast } from "react-hot-toast";
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -85,20 +87,15 @@ export default function SearchAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            MUI
+            Cyethack
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
           <button onClick={logoutHandler}>
             {" "}
-            <CiLogout className="ml-8 cursor-pointer" />
+            <div className="ml-5 flex gap-x-5 justify-center items-center" >
+            <NotificationsIcon></NotificationsIcon>
+            <AccountCircle></AccountCircle>
+            <CiLogout className=" cursor-pointer" />
+            </div>
           </button>
         </Toolbar>
       </AppBar>
