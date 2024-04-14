@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="h-screen w-screen flex justify-center items-center">
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/dashboard" element={<Home />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route
           path="/list"
           element={isLoggedIn ? <List /> : <Navigate to="/" />}
