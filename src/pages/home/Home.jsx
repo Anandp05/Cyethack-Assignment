@@ -21,7 +21,7 @@ const Home = () => {
       dispatch(login());
       toast("Logged In Successful");
     } else {
-      toast("Unsucesull Please Try Again");
+      toast("Unsucesfull Please Try Again !!");
     }
   };
 
